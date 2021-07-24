@@ -6,6 +6,7 @@ const gallery = document.getElementById('gallery');
 //  EVENT LISTENERS
 // ------------------------------------------
 
+<<<<<<< HEAD
 
 
 // ------------------------------------------
@@ -28,6 +29,15 @@ async function augment() {
 
 }
 
+=======
+async function extract() {
+  const response = await fetch('https://randomuser.me/api/');
+  const promise = await response.json();
+  const data = console.log(promise.results[0]);
+}
+
+extract();
+>>>>>>> parent of 44430a3 (first bug)
 
 
 function generate(img, name, email, city, cell, address, dob) {
@@ -49,6 +59,7 @@ function generate(img, name, email, city, cell, address, dob) {
       </div>
   </div>
 
+<<<<<<< HEAD
   // IMPORTANT: Below is only for exceeds tasks
   <div class="modal-btn-container">
       <button type="button" id="modal-prev" class="modal-prev btn">Prev</button>
@@ -87,13 +98,20 @@ function generateHTML(img, first, last, email, city, state, country) {
   section.setAttribute("class", "card");
   gallery.appendChild(section);
   section.innerHTML=`
+=======
+function generateHTML(img,first,last,email,city,state) {
+  const section = document.createElement('div');
+  section.setAttribute("class", "card");
+  gallery.appendChild(div);
+  document.querySelector('card').innerHTML=`
+>>>>>>> parent of 44430a3 (first bug)
       <div class="card-img-container">
           <img class="card-img" src=${img} alt="profile picture">
       </div>
       <div class="card-info-container">
           <h3 id="name" class="card-name cap">${first} ${last}</h3>
           <p class="card-text">${email}</p>
-          <p class="card-text cap">${city}, ${state}, ${country}</p>
+          <p class="card-text cap">${city}, ${state}</p>
       </div>`
   ;
 }
